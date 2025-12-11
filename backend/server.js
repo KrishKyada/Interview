@@ -7,12 +7,12 @@ const app = express();
 
 const __dirname = path.resolve()
 
-app.get('/', (req, res) => {
-  res.status(200).json({ msg: 'Server is running' });
-})
-
 app.get("/health", (req, res) => {
   res.status(200).json({ msg: "api is up and running" });
+});
+
+app.get("/books", (req, res) => {
+  res.status(200).json({ msg: "this is books endpoint" });
 });
 
 //making ready for deployment
